@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - My Portfolio{% endblock %}
+
+{% block content %}
+<style>
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+</style>
+
+<h2 class="text-center mb-4">My Projects</h2>
+<div class="row">
+    <!-- Project 1 -->
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm" style="border-radius: 22px;">
+            <img src="{{ url_for('static', filename='assets/project1.jpg') }}"
+                 class="card-img-top"
+                 alt="Industry-Wide Business Analytics Dashboard"
+                 style="height:140px; object-fit:cover; border-top-left-radius: 22px; border-top-right-radius: 22px;">
+            <div class="card-body py-3 px-2"
+                 style="background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%); color: #fff; border-radius: 0 0 22px 22px;">
+                <h6 class="card-title mb-2" style="font-size:1.05rem;">Industry-Wide Business Analytics Dashboard</h6>
+                <p class="card-text mb-2" style="font-size:0.95rem;">
+                    <strong>Tools:</strong> Python, Pandas, MySQL, Power BI
+                </p>
+                <ul style="font-size:0.93rem; padding-left:1.1rem;">
+                    <li>Curated datasets across 150+ industries with 98% data completeness.</li>
+                    <li>Processed 500,000+ rows using Python/MySQL, reducing transformation time by 40%.</li>
+                    <li>Designed 20+ Power BI dashboards, enabling 35% faster decision-making.</li>
+                </ul>
+                <a href="#" class="btn btn-light btn-sm mt-2" style="color:#ff5e62;" data-bs-toggle="modal" data-bs-target="#project1Modal">View Details</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm" style="border-radius: 22px;">
+            <img src="{{ url_for('static', filename='assets/project2.jpg') }}"
+                 class="card-img-top"
+                 alt="Project 2"
+                 style="height:140px; object-fit:cover; border-top-left-radius: 22px; border-top-right-radius: 22px;">
+            <div class="card-body py-3 px-2"
+                 style="background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%); color: #fff; border-radius: 0 0 22px 22px;">
+                <h6 class="card-title mb-2" style="font-size:1.05rem;">Personal Portfolio Website</h6>
+                <p class="card-text mb-2" style="font-size:0.95rem;">
+                    <strong>Tools:</strong> Flask, HTML, CSS, Python, MySQL
+                </p>
+                <ul style="font-size:0.93rem; padding-left:1.1rem;">
+                    <li>Showcases skills, projects, and experiences in Business Analytics.</li>
+                    <li>Clean, responsive, and visually appealing design.</li>
+                    <li>Sections: About Me, Projects, Contact, Resume.</li>
+                    <li>Interactive navigation and user engagement.</li>
+                    <li>Professional gradient background and branding.</li>
+                    <li>Hosted online for recruiters and collaborators.</li>
+                </ul>
+                <a href="#" class="btn btn-light btn-sm mt-2" style="color:#185a9d;" data-bs-toggle="modal" data-bs-target="#project2Modal">View Details</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm" style="border-radius: 22px;">
+            <img src="{{ url_for('static', filename='assets/project3.jpg') }}"
+                 class="card-img-top"
+                 alt="Project 3"
+                 style="height:140px; object-fit:cover; border-top-left-radius: 22px; border-top-right-radius: 22px;">
+            <div class="card-body py-3 px-2"
+                 style="background: linear-gradient(135deg, #fc5c7d 0%, #6a82fb 100%); color: #fff; border-radius: 0 0 22px 22px;">
+                <h6 class="card-title mb-2" style="font-size:1.05rem;">Under Pressure: Rising Student Stress Levels</h6>
+                <p class="card-text mb-2" style="font-size:0.95rem;">
+                    <strong>Tools:</strong> Python, Matplotlib, Pandas, Power BI, MySQL
+                </p>
+                <ul style="font-size:0.93rem; padding-left:1.1rem;">
+                    <li><strong>Objective:</strong> Explore causes of student stress and suggest improvements.</li>
+                    <li><strong>Key Insights:</strong> Avg Age: 23.92, Stress Level: 5.36, Study Hours: 29.13, Top Factors: Financial, Relationship.</li>
+                    <li><strong>Main Causes:</strong> Academic pressure, financial burdens, social issues, lack of support, digital overload.</li>
+                    <li><strong>Solutions:</strong> Mental health support, balanced study, reduce pressure, peer communities.</li>
+                </ul>
+                <a href="#" class="btn btn-light btn-sm mt-2" style="color:#6a82fb;" data-bs-toggle="modal" data-bs-target="#project3Modal">View Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project 1 Modal -->
+<div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background: linear-gradient(90deg, #ff9966 0%, #ff5e62 100%); color: #fff;">
+        <h5 class="modal-title" id="project1ModalLabel">Industry-Wide Business Analytics Dashboard</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background: linear-gradient(135deg, #ffe0c3 0%, #ffb6b9 100%); color: #222;">
+        <strong>Tools:</strong> Python, Pandas, MySQL, Power BI<br>
+        <ul>
+          <li>Curated datasets across 150+ industries with 98% data completeness.</li>
+          <li>Processed 500,000+ rows using Python/MySQL, reducing transformation time by 40%.</li>
+          <li>Designed 20+ Power BI dashboards, enabling 35% faster decision-making.</li>
+        </ul>
+        <p>Additional details about this project can go here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 2 Modal -->
+<div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%); color: #fff;">
+        <h5 class="modal-title" id="project2ModalLabel">Personal Portfolio Website</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); color: #222;">
+        <strong>Tools:</strong> Flask, HTML, CSS, Python, Power BI, MySQL, Excel<br>
+        <ul>
+          <li>Showcases skills, projects, and experiences in Business Analytics.</li>
+          <li>Clean, responsive, and visually appealing design.</li>
+          <li>Sections: About Me, Projects, Contact, Resume.</li>
+          <li>Interactive navigation and user engagement.</li>
+          <li>Professional gradient background and branding.</li>
+          <li>Hosted online for recruiters and collaborators.</li>
+        </ul>
+        <p>Additional details about this project can go here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 3 Modal -->
+<div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%); color: #fff;">
+        <h5 class="modal-title" id="project3ModalLabel">Under Pressure: Rising Student Stress Levels</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%); color: #222;">
+        <strong>Tools:</strong> Python, Matplotlib, Pandas<br>
+        <ul>
+          <li><strong>Objective:</strong> Explore causes of student stress and suggest improvements.</li>
+          <li><strong>Key Insights:</strong> Avg Age: 23.92, Stress Level: 5.36, Study Hours: 29.13, Top Factors: Financial, Relationship.</li>
+          <li><strong>Main Causes:</strong> Academic pressure, financial burdens, social issues, lack of support, digital overload.</li>
+          <li><strong>Solutions:</strong> Mental health support, balanced study, reduce pressure, peer communities.</li>
+        </ul>
+        <p>Additional details about this project can go here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

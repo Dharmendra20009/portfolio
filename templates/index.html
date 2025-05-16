@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h2>Welcome to My Portfolio</h2>
+    <p class="lead">Explore my journey in business analytics through real-world projects, technical skills, and data-driven solutions. Dive into my work, discover how I turn data into insight, and feel free to get in touch for collaboration or opportunities.</p>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3 text-center">
+        <h3>About Me</h3>
+        <p>Learn more about my background and skills.</p>
+        <a href="/about" class="btn btn-primary">Learn More</a>
+    </div>
+    <div class="col-md-3 text-center">
+        <h3>Projects</h3>
+        <p>Check out the projects I’ve worked on.</p>
+        <a href="/projects" class="btn btn-primary">View Projects</a>
+    </div>
+    <div class="col-md-3 text-center">
+        <h3>Contact</h3>
+        <p>Get in touch with me for collaborations or inquiries.</p>
+        <a href="/contact" class="btn btn-primary">Contact Me</a>
+    </div>
+    <div class="col-md-3 text-center">
+        <h3>Resume</h3>
+        <p>Download my professional resume.</p>
+        <a href="{{ url_for('static', filename='assets/resume.pdf') }}" class="btn btn-primary" target="_blank">Download Resume</a>
+    </div>
+</div>
+{% endblock %}

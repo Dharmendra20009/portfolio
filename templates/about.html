@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}About - Dharmendra Gupta Portfolio{% endblock %}
+
+{% block content %}
+<!-- Hero Section / About Me + Cards Section (attached visually) -->
+<div class="mb-0 p-4" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 22px 22px 0 0; box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18); color: #fff;">
+    <div class="row align-items-stretch">
+        <div class="col-md-4 d-flex flex-column justify-content-center align-items-center text-center mb-3 mb-md-0">
+            <img src="{{ url_for('static', filename='assets/About.12.jpg') }}" alt="Dharmendra Gupta"
+                 style="height: 100%; max-height: 320px; width: 260px; object-fit: cover; border: 4px solid #f5f90b; border-radius: 22px;">
+        </div>
+        <div class="col-md-8 d-flex flex-column justify-content-center">
+            <div>
+                <h2 class="fw-bold mb-2" style="letter-spacing: 1px; font-size:1.4rem;">About Me</h2>
+                <h4 class="mb-2" style="font-weight: 400; font-size:1.05rem;">Dharmendra Gupta</h4>
+                <h6 class="mb-3" style="font-weight: 400; font-size:0.95rem;">Business Analytics Enthusiast</h6>
+                <p style="font-size:0.97rem;">
+                    I'm Dharmendra Gupta, a BBA graduate specializing in Business Analytics. With a strong analytical mindset and a passion for data-driven decision-making, I thrive on uncovering insights that drive business growth and efficiency.<br><br>
+                    My academic foundation is built on understanding business fundamentals while leveraging tools like SQL, Python, Pandas, and Power BI to interpret, analyze, and visualize data effectively.<br><br>
+                    I'm skilled at tackling complex business problems through data analysis and delivering actionable, data-backed strategies. I’m motivated by impact, innovation, and collaboration in fast-paced, dynamic environments.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cards Section visually attached (no top margin, rounded bottom corners) -->
+<div class="container my-5">
+    <div class="row justify-content-center g-5">
+        <!-- Skills Card -->
+        <div class="col-md-5 mb-4">
+            <div class="card h-100 shadow-lg border-0" style="background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%); color: #fff; border-radius: 18px;">
+                <div class="card-body text-center py-4">
+                    <i class="fas fa-chart-pie fa-2x mb-3" style="color: #fff176;"></i>
+                    <h4 class="card-title mb-3"><i class="fas fa-tools"></i> Skills</h4>
+                    <ul class="list-unstyled fs-6 text-start mx-auto" style="max-width: 260px;">
+                        <li><i class="fas fa-code me-2"></i>Python, MySQL, Pandas, Power BI</li>
+                        <li><i class="fas fa-chart-line me-2"></i> KPI Development & Tracking, Financial & Market Analysis, Trend Analysis, Data-Driven Decision Making</li>
+                        <li><i class="fas fa-laptop-code me-2"></i>HTML, Flask, CSS</li>
+                        <li><i class="fas fa-bullhorn me-2"></i> Digital Marketing, SEO, Social Media Marketing, Content Marketing, Email Marketing, Mobile Marketing, Search Engine Marketing, Web Hosting, Web Page Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Experience Card (to the right of Skills Card) -->
+        <div class="col-md-5 mb-4">
+            <div class="card h-100 shadow-lg border-0" style="background: linear-gradient(135deg, #fc5c7d 0%, #6a82fb 100%); color: #fff; border-radius: 18px;">
+                <div class="card-body text-center py-4">
+                    <i class="fas fa-chart-bar fa-2x mb-3" style="color: #ffd54f;"></i>
+                    <h4 class="card-title mb-3"><i class="fas fa-briefcase"></i> Experience</h4>
+                    <p class="fw-bold mb-1 small">Solution Graph Company (Remote)</p>
+                    <ul class="list-unstyled fs-6 text-start mx-auto" style="max-width: 260px;">
+                        <li><i class="fas fa-user-tie me-2"></i>Business Analytics Intern</li>
+                        <li>Improved workflow optimization by 25% through data analysis.</li>
+                        <li>Created dashboards in Excel & Power BI for leadership.</li>
+                        <li>Supported HR planning with market research & modeling.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
